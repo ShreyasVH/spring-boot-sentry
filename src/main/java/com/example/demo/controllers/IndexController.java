@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.sentry.Sentry;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -9,16 +8,15 @@ import java.util.Map;
 @RestController
 public class IndexController
 {
-    Logger logger = LoggerFactory.getLogger(IndexController.class);
-
     @GetMapping("/api")
     public String get(@RequestParam(value = "input") String input)
     {
-        logger.trace("Trace logging");
-        logger.debug("Debug logging");
-        logger.info("Info logging");
-        logger.warn("Warn logging");
-        logger.error("Error logging");
+        try {
+            throw new Exception("This is a test.");
+        } catch (Exception e) {
+            Sentry.captureException(e);
+        }
+
         return "GET REQUEST with input: " + input;
     }
 

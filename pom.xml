@@ -26,8 +26,8 @@
 
 		<dependency>
 			<groupId>io.sentry</groupId>
-			<artifactId>sentry-logback</artifactId>
-			<version>1.7.30</version>
+			<artifactId>sentry-spring-boot-starter</artifactId>
+			<version>6.6.0</version>
 		</dependency>
 	</dependencies>
 
