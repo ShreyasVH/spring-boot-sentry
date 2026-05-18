@@ -1,0 +1,12 @@
+# maven 3.9.15 path
+export PATH=
+
+# java 26.0.1 path
+export PATH=
+export JAVA_HOME=
+
+export PORT=
+
+export SENTRY_ORGANIZATION_ID=
+export SENTRY_PROJECT_ID=
+export SENTRY_PUBLIC_KEY=
